@@ -1,0 +1,17 @@
+nav {
+  font-size: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: left;
+  min-height: 10vh;
+  background: ffc0cb;
+  color: black;
+}
+
+li {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}

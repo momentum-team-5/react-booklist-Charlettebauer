@@ -32,7 +32,10 @@ export default function Login ({ auth, onLogin }) {
   }
 
   return (
-    <div className='Login'>
+    <div className='Title'>
+      <h1 className=' f2 b'>No Shelf Control</h1>
+
+      <div className='Login'>
       <h1 className='f2 b'>Log In or <Link to='/signup'>Sign up</Link></h1>
       {
           feedbackMsg &&
@@ -76,6 +79,7 @@ export default function Login ({ auth, onLogin }) {
           <button type='submit'>Log In</button>
         </div>
       </form>
+    </div>
     </div>
   )
 }

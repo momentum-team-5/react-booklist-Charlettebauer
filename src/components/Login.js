@@ -33,17 +33,17 @@ export default function Login ({ auth, onLogin }) {
 
   return (
     <div className='Title'>
-      <h1 className=' f2 b'>No Shelf Control</h1>
+      <h1 className=' f1 b washed-yellow'>No Shelf Control</h1>
 
       <div className='Login'>
-      <h1 className='f2 b'>Log In or <Link to='/signup'>Sign up</Link></h1>
-      {
+        <h1 className='f3 b washed-yellow'>Log In or <Link to='/signup'>Sign up</Link></h1>
+        {
           feedbackMsg &&
           (
             <div className={clsx(
-              'ba', 'bw1', 'pa3',
+              'ba', 'bw1', 'pa3', 'w-50',
               {
-                'bg-light-gray': (feedbackMsg.type === 'error'),
+                'bg-black': (feedbackMsg.type === 'error'),
                 'bg-washed-yellow': (feedbackMsg.type === 'success')
               }
             )}
@@ -52,34 +52,34 @@ export default function Login ({ auth, onLogin }) {
             </div>
           )
       }
-      <form onSubmit={handleSubmit}>
-        <div className='mv2'>
-          <label className='db b mv2' htmlFor='username'>Username</label>
-          <input
-            required
-            className='f5 pa2 w-100'
-            type='text'
-            id='username'
-            value={username}
-            onChange={event => setUsername(event.target.value)}
-          />
-        </div>
-        <div className='mv2'>
-          <label className='db b mv2' htmlFor='password'>Password</label>
-          <input
-            required
-            className='f5 pa2 w-100'
-            type='password'
-            id='password'
-            value={password}
-            onChange={event => setPassword(event.target.value)}
-          />
-        </div>
-        <div className='mv2'>
-          <button type='submit'>Log In</button>
-        </div>
-      </form>
-    </div>
+        <form onSubmit={handleSubmit}>
+          <div className='mv2'>
+            <label className='db b mv2 washed-yellow' htmlFor='username'>Username</label>
+            <input
+              required
+              className='f5 pa2 w-50'
+              type='text'
+              id='username'
+              value={username}
+              onChange={event => setUsername(event.target.value)}
+            />
+          </div>
+          <div className='mv2'>
+            <label className='db b mv2 washed-yellow' htmlFor='password'>Password</label>
+            <input
+              required
+              className='f5 pa2 w-50'
+              type='password'
+              id='password'
+              value={password}
+              onChange={event => setPassword(event.target.value)}
+            />
+          </div>
+          <div className='mv2 washed-yellow'>
+            <button type='submit'>Log In</button>
+          </div>
+        </form>
+      </div>
     </div>
   )
 }

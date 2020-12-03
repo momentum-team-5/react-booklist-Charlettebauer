@@ -30,14 +30,14 @@ export default function Register ({ auth, onRegister }) {
 
   return (
     <div className='Register'>
-      <h1 className='f2 b'>Sign Up or <Link to='/login'>Log In</Link></h1>
+      <h1 className='f2 b washed-yellow'>Sign Up or <Link to='/login'>Log In</Link></h1>
       {
           feedbackMsg &&
           (
             <div className={clsx(
-              'ba', 'bw1', 'pa3',
+              'ba', 'bw1', 'pa3', 'w-50',
               {
-                'bg-light-gray': (feedbackMsg.type === 'error'),
+                'bg-black': (feedbackMsg.type === 'error'),
                 'bg-washed-yellow': (feedbackMsg.type === 'success')
               }
             )}
@@ -48,10 +48,10 @@ export default function Register ({ auth, onRegister }) {
       }
       <form onSubmit={handleSubmit}>
         <div className='mv2'>
-          <label className='db b mv2' htmlFor='username'>Username</label>
+          <label className='db b mv2 washed-yellow' htmlFor='username'>Username</label>
           <input
             required
-            className='f5 pa2 w-100'
+            className='f5 pa2 w-50'
             type='text'
             id='username'
             value={username}
@@ -59,10 +59,10 @@ export default function Register ({ auth, onRegister }) {
           />
         </div>
         <div className='mv2'>
-          <label className='db b mv2' htmlFor='password'>Password</label>
+          <label className='db b mv2 white' htmlFor='password'>Password</label>
           <input
             required
-            className='f5 pa2 w-100'
+            className='f5 pa2 w-50'
             type='password'
             id='password'
             value={password}
